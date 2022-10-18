@@ -11,9 +11,14 @@
   </head>
 
   <body>
-    <header>
-      <%= link_to "ログイン", '#'%>
-    </header>
-    <%= yield %>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+      <div class="container-fluid">
+        <a class="navbar-brand">TsukasaRailsTodoApp</a>
+        <form class="d-flex">
+          <%= button_to "Login", '#', method: :get, class: "btn btn-outline-primary"%>
+        </form>
+      </div>
+    </nav>
+  <%= yield %>
   </body>
 </html>

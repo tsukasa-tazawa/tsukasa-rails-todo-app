@@ -1,5 +1,5 @@
-<div class="container">
-  <h1>TODO アプリ</h1> 
-  <h2>自分のTODOを管理しましょう。</h2>
-  <%=button_to "新規登録はこちらから", {controller: 'static_pages', action: 'home'}, {method: :get}%> 
+<div class="position-absolute top-50 start-50 translate-middle">
+  <h1 class="fw-lighter text-secondary text-center lh-lg">TODO App</h1> 
+  <h2 class="fw-lighter  text-secondary text-center lh-lg">自分のTODOを管理しましょう。</h2>
+  <%= button_to '新規登録はこちらから', '#', class:"btn btn-primary d-grid gap-2 col-6 mx-auto lh-lg mt-4"%>
 </div>
