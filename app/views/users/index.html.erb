@@ -1,0 +1,9 @@
+<h1 class="fw-lighter text-center">All Users</h1>
+
+<ul class="users">
+  <% @user.each do |user| %>
+    <li>
+      <%= link_to user.name, user %>
+    </li>
+  <% end %>
+</ul>
