@@ -1,7 +1,12 @@
-<h1>TODO編集</h1>
-<%= form_for(@task) do |f| %>
-  <div><%= f.label :title %></div>
-  <div><%= f.text_field :title %></div>
-  <div><%= f.submit %></div>
-<% end %>
-<%= link_to '戻る', tasks_path %>
+<h1 class="fw-lighter text-center">To Do edit</h1>
+
+<div class="col-md-6 col-md-offset-3 mx-auto mt-4">
+  <%= form_with model:@task do |f| %>
+    <%= f.label :title, class:"fw-lighter mb-2"%>
+    <%= f.text_field :title, class:"form-control mb-3" %>
+    <%= f.submit "編集完了する", class:"btn btn-info mb-3" %>
+  <% end %>
+</div>
+<div class="col-md-6 col-md-offset-3 mx-auto mt-4">
+  <%= link_to "戻る", tasks_path, class:"btn btn-primary d-grid gap-2 col-6 mx-auto" %>
+</div>
