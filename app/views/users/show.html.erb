@@ -1,0 +1,20 @@
+<h1 class="fw-lighter text-center">To Do list</h1>
+
+<table class="mx-auto mt-4">
+  <thead>
+    <th class="fw-lighter text-center">To Do title</th>
+  </thead>
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.title %></td>
+        <td><%= link_to '編集する', edit_task_path(task), class:"btn btn-info" %></td>
+        <td><%= button_to '削除する', task_path(task), method: :delete, class:"btn btn-success" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="mx-auto mt-4" style="width: 200px;">
+  <%= link_to 'To Doを追加しましょう', new_task_path, class:"btn btn-primary " %>
+</div>
