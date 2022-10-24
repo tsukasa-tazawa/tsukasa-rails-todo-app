@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
-    
+    before_action :current_user, only: [:destroy, :update]
+
     def new
         @task = Task.new
     end
