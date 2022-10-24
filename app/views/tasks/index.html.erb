@@ -2,14 +2,16 @@
 
 <table class="mx-auto mt-4">
   <thead>
-    <th class="fw-lighter text-center mb-4">To Do title</th>
+    <th class="fw-lighter text-center">title</th>
+    <th class="fw-lighter text-center">content</th>
   </thead>
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.title %></td>
+        <td><%= task.content %></td>
         <td><%= link_to '編集する', edit_task_path(task), class:"btn btn-info" %></td>
-        <td><%= button_to '削除する', task_path(task), method: :delete, class:"btn btn-success" %></td>
+        <td><%= button_to '削除する', task_path(task), method: :delete, class:"btn btn-success", data:{confirm: "削除しますか？"}%></td>
       </tr>
     <% end %>
   </tbody>
