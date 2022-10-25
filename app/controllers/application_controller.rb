@@ -6,6 +6,12 @@ class ApplicationController < ActionController::Base
       render html: "TODOアプリにようこそ"
     end
 
+    def autheniticate_user
+      if current_user==nil
+        flash[:notice]="ログインが必要です"
+        redirect_to("/login")
+      end
+    end
 
     private
    # ログイン済みユーザーかどうか確認

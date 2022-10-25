@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :autheniticate_user, only: [:index, :show]
 
   def index
     @user = User.all
