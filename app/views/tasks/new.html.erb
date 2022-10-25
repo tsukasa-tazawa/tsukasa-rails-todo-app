@@ -6,6 +6,8 @@
     <%= f.text_field :title, class:"form-control mb-3" %>
     <%= f.label :content, class:"fw-lighter mb-2"%>
     <%= f.text_area :content, class:"form-control mb-3" %>
+    <%= f.label :status, class:"fw-lighter mb-2"%>
+    <%= f.select :status, Task.statuses.keys.to_a, {}, class: "form-select form-select-sm mb-3"%>
     <%= f.submit "ToDoを作成", class:"btn btn-info mb-3" %>
   <% end %>
 </div>
