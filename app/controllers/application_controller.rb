@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
     include SessionsHelper
 
     def index
-      redirect_to '/static_pages/home'
     end
 
     def autheniticate_user
