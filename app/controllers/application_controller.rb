@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
     include SessionsHelper
 
     def index
-      render html: "TODOアプリにようこそ"
+      redirect_to '/static_pages/home'
     end
 
     def autheniticate_user
@@ -11,6 +11,13 @@ class ApplicationController < ActionController::Base
         flash[:notice]="ログインが必要です"
         redirect_to("/login")
       end
+    end
+
+    def forbid_login_user
+      @user = User.find(params[:id])
+        if not @user == current_user
+          redirect_to current_user
+        end
     end
 
     private
