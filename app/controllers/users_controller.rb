@@ -20,6 +20,10 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @tasks = @user.tasks.all
+
+    if params[:status].present?
+      @tasks = @tasks.where(status: params[:status])
+    end
   end
 
   private
