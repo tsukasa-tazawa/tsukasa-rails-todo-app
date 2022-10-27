@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    models:
+      task: タスク
+    attributes:
+      task:
+        status: ステータス
+    enums:
+      task:
+        status:
+          not_started: 未着手 
+          in_progress: 進行中
+          compleated: 完了
+
+
+
+    
